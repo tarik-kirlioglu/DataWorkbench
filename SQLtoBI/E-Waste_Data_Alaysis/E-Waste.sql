@@ -1,3 +1,5 @@
+-- Data Source:https://www.kaggle.com/datasets/arifmia/e-waste-data
+
 -- Insigth into Dataset
 SELECT *
 FROM e_waste;
@@ -96,7 +98,3 @@ SELECT
     AVG(Carbon_Footprint) AS Avg_Carbon_Footprint
 FROM e_waste
 GROUP BY Item_Name;
-
-
-
-
