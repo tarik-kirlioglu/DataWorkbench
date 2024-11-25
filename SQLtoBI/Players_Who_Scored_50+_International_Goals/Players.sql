@@ -21,7 +21,6 @@ CASE
 END
 );
 
-
 -- Top 10 International Goal Scorers in All Time
 SELECT TOP 10 Player, Nation, Confederation, Goals, Caps, Goals_per_match, Status
 FROM Players
@@ -73,5 +72,3 @@ FROM Players
 WHERE Status='Active'
 GROUP BY Nation, Confederation
 ORDER BY Per_Match_Goals DESC;
-
-
