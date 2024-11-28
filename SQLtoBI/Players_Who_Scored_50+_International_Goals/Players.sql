@@ -14,10 +14,10 @@ ALTER TABLE Players ADD Status VARCHAR(20);
 
 -- Update Status Colummn
 UPDATE Players
-SET Status= (
+SET Status = (
 CASE
 	WHEN Career_span LIKE '%-' THEN 'Active'
-    ELSE 'Retired'
+    	ELSE 'Retired'
 END
 );
 
