@@ -17,7 +17,7 @@ UPDATE Players
 SET Status= (
 CASE
 	WHEN Career_span LIKE '%-' THEN 'Active'
-    	ELSE 'Retired'
+    ELSE 'Retired'
 END
 );
 
