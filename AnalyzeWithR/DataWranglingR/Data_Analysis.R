@@ -50,6 +50,6 @@ plot1 <- otu.tax %>%
   theme_minimal()
 
 #save the plot
-png("Relative_Abundance.png", width = 2400, height = 1600, res = 360)
+png("relative_abundance.png", width = 2400, height = 1600, res = 360)
 plot1
 dev.off()
