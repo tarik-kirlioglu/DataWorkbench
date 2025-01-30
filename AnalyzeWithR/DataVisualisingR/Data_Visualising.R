@@ -7,12 +7,12 @@ library(viridis)
 #seeing datasets
 data()
 
+#creating plots from various data
 
 diamonds <- diamonds %>% ggplot(aes(fct_infreq(cut))) +
   geom_bar(fill = "blue", alpha = 0.5) +
   labs(x = "Diamond Cut", y = "Count", title = "Distribution of Diamond Cuts") +
   theme_bw()
-
 
 DNase <- DNase %>% 
   ggplot(aes(conc, density, colour = Run)) +
@@ -31,7 +31,6 @@ PlantGrowth <- PlantGrowth %>%
        title="Results from an Experiment on Plant Growth") +
   theme_bw()
 
-
 airquality <- airquality %>% 
   drop_na() %>% 
   mutate(Month = gsub( 5 ,"May",Month),
@@ -47,15 +46,15 @@ airquality <- airquality %>%
               y ="Solar radiation",
               title = "New York Air Quality Measurements") +
          theme_bw()
-     
 
+#calculating the correlation and creating the heatmap
 correlation <- cor(mtcars)
-
 corrr <- pheatmap(correlation, 
          color = viridis(100), 
          display_numbers = TRUE,
          main = "Correlation Matrix") 
 
+#save plots
 png("airquality.png", width = 2400, height = 1600, res = 360)
 airquality
 dev.off()
@@ -71,7 +70,6 @@ dev.off()
 png("PlantGrowth.png", width = 2400, height = 1600, res = 360)
 PlantGrowth
 dev.off()
-
 
 png("diamonds.png", width = 2400, height = 1600, res = 360)
 diamonds
