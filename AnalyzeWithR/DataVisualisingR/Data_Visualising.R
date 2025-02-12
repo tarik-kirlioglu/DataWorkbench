@@ -16,8 +16,8 @@ diamonds <- diamonds %>% ggplot(aes(fct_infreq(cut))) +
 
 DNase <- DNase %>% 
   ggplot(aes(conc, density, colour = Run)) +
-  geom_line(size=1) +
-  geom_point(alpha=0.5, size=5) +
+  geom_line(size = 1) +
+  geom_point(alpha = 0.5, size = 5) +
   labs(title = "Elisa assay of DNase",
        x = "Concentration",
        y ="Density") +
@@ -25,10 +25,10 @@ DNase <- DNase %>%
 
 PlantGrowth <- PlantGrowth %>% 
   ggplot(aes(group, weight, fill = group)) +
-  geom_boxplot(alpha=0.5) +
-  labs(x="Group",
-       y="Weight",
-       title="Results from an Experiment on Plant Growth") +
+  geom_boxplot(alpha = 0.5) +
+  labs(x = "Group",
+       y = "Weight",
+       title = "Results from an Experiment on Plant Growth") +
   theme_bw()
 
 airquality <- airquality %>% 
@@ -39,8 +39,8 @@ airquality <- airquality %>%
          Month = gsub( 8 ,"August",Month),
          Month = gsub( 9 ,"September",Month)) %>% 
          ggplot(aes(Ozone, Solar.R) ) +
-         geom_point(alpha= 0.7, aes(size=Wind, color=Temp)) +
-         geom_smooth(method = lm, se=F) +
+         geom_point(alpha = 0.7, aes(size = Wind, color = Temp)) +
+         geom_smooth(method = lm, se = F) +
          facet_wrap(~Month) +
          labs(x = "Ozone",
               y ="Solar radiation",
