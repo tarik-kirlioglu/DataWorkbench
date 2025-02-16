@@ -20,7 +20,7 @@ DNase <- DNase %>%
   geom_point(alpha = 0.5, size = 5) +
   labs(title = "Elisa assay of DNase",
        x = "Concentration",
-       y ="Density") +
+       y = "Density") +
   theme_bw()
 
 PlantGrowth <- PlantGrowth %>% 
@@ -43,7 +43,7 @@ airquality <- airquality %>%
          geom_smooth(method = lm, se = F) +
          facet_wrap(~Month) +
          labs(x = "Ozone",
-              y ="Solar radiation",
+              y = "Solar radiation",
               title = "New York Air Quality Measurements") +
          theme_bw()
 
